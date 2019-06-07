@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'selector',
-  templateUrl: './name.component.html',
-  styleUrls: ['./name.component.style']
+  selector: '<%= selector %>',
+  templateUrl: './<%= dasherize(name) %>.component.html',
+  styleUrls: ['./<%= dasherize(name) %>.component.<%= style %>']
 })
-export class nameComponent implements OnInit {
+export class <%= classify(name) %> Component implements OnInit {
 
   constructor() { }
 
