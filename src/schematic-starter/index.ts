@@ -17,7 +17,10 @@ interface AddFilesInterface {
 export function schematicStarter(_options: AddFilesInterface): Rule {
   return (tree: Tree, context: SchematicContext) => {
     // todo: use the template() function and provide the strings and _options members
-    const rules: Rule[] = [template({ ...strings, ..._options })];
+    const rules: Rule[] = [
+      template({ ...strings, ..._options }),
+      move("./src/app/components")
+    ];
 
     const source = url("./files");
     return apply(source, rules)(context);
