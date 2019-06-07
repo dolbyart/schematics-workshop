@@ -4,5 +4,13 @@
   "title": "Options Schema",
   "type": "object",
   "required": [],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the componet",
+      "default": "ng-conf",
+      "x-prompt": "Enter the name of the component"
+    }
+  }
 }
